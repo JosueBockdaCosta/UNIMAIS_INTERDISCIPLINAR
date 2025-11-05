@@ -3,11 +3,10 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
-import Buyer from "./pages/Compras";
+import Seller from "./pages/Seller";
+import Buyer from "./pages/Buyer";
+import Admin from "./pages/Admin";
 import "./styles.css";
-import Conta from "./pages/Conta";
-import FornecedorLogin from "./pages/FornecedorLogin";
-import LojistaLogin from "./pages/LojistaLogin";
 
 function App() {
   return (
@@ -16,11 +15,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/Conta" element={<Conta />} />
+        <Route path="/seller" element={<Seller />} />
         <Route path="/buyer" element={<Buyer />} />
-        <Route path="/fornecedor" element={<FornecedorLogin />} />
-        <Route path="/lojista" element={<LojistaLogin />} />
-
+        <Route path="/admin" element={<Admin />} />
       </Routes>
     </BrowserRouter>
   );
